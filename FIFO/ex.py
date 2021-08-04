@@ -27,7 +27,8 @@ P = np.zeros(4, dtype=np.int16)  # Sequence numbers..
 buffer = dict()  # Storing messages on wait.
 
 
-def FIFO_multicast_send(delay=0.1, msg=None):  # Similar to broadcast when using size.
+def FIFO_multicast_send(group=None, msg=None, delay=0.1):  # Similar to broadcast when using size.
+    assert group is not None
     P[rank] += 1  # Set P_j[j] = P_j[j]+1
     reqs = []
     if msg is None:
@@ -69,8 +70,8 @@ def example():
         return
 
     if rank == 0:
-        FIFO_multicast_send(delay=0.5)
-        FIFO_multicast_send(delay=0.03)
+        FIFO_multicast_send(group, delay=0.5)
+        FIFO_multicast_send(group, delay=0.03)
         FIFO_recv()
     elif rank == 1:
         FIFO_recv()
@@ -79,12 +80,14 @@ def example():
     elif rank == 2:
         FIFO_recv()
         FIFO_recv()
-        FIFO_multicast_send()
+        FIFO_multicast_send(group)
     elif rank == 3:
         FIFO_recv()
         FIFO_recv()
         FIFO_recv()
-    print('[%d] %s' % (rank, P))
+
+    print('[Process %d] %s' % (rank, P))
+
 
 if __name__ == "__main__":
     # Running example.
