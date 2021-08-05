@@ -2,6 +2,7 @@
 - Do not pay attention to order of multicast sending.
 - Ensure all receivers receive all multicasts in the same order.
 - In summary, if a correct process P sends message m before m_prime (independent of the senders), then any other correct process P_prime that sends m_prime would already have sent m.
+- Sequencer based approach.
 
 
 ## NOTES
