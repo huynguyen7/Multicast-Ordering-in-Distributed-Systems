@@ -7,8 +7,8 @@ from time import sleep
 
     @author: Huy Nguyen
     Source:
-    +https://www.coursera.org/learn/cloud-computing/lecture/XmDtl/2-2-implementing-multicast-ordering-1
-    +https://cse.buffalo.edu/~stevko/courses/cse486/spring13/lectures/12-multicast2.pdf
+        +https://www.coursera.org/learn/cloud-computing/lecture/XmDtl/2-2-implementing-multicast-ordering-1
+        +https://cse.buffalo.edu/~stevko/courses/cse486/spring13/lectures/12-multicast2.pdf
 
     Process index based 1 (Since I'm choosing 0 as SEQUENCER).
     Task index based 0.
