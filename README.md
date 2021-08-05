@@ -1,5 +1,5 @@
 # MULTICAST ORDERING IN DISTRIBUTED SYSTEMS
-This repository contains basic implementations for Multicast Ordering:
+This repository contains academia implementations for Multicast Ordering:
 - FIFO Ordering.
 - Causal Ordering
 - Total Ordering.
