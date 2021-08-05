@@ -10,4 +10,5 @@
 - I'm open to a pull request!
 
 ## Example:
-![linr](./ex.png)
+![linr](./imgs/ex.png)
+![linr](./imgs/rs.png)
