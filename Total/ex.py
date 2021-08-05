@@ -74,7 +74,6 @@ def total_recv():
         buffer[tmp_seq_num] = (multicast_msg[MSG], source)
         while tmp_seq_num in buffer:
             print('[Process %d] doing task %d: (MSG: %d, SOURCE: %d).' % (rank, tmp_seq_num, buffer[tmp_seq_num][0], buffer[tmp_seq_num][1]))
-            #buffer.pop(tmp_seq_num)
             tmp_seq_num += 1
         S = tmp_seq_num if tmp_seq_num in buffer else tmp_seq_num-1
     else:  # Buffer msg.
