@@ -10,8 +10,8 @@
 - I'm open to a pull request!
 
 ## Example:
-Communication:
+- Communication:
 ![linr](./imgs/ex.png)
 
-Log result:
+- Log result:
 ![linr](./imgs/rs.png)
