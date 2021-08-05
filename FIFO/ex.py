@@ -34,13 +34,14 @@ def FIFO_multicast_send(group=None, msg=None, delay=0.1):  # Similar to broadcas
     if msg is None:
         for i in group:
             if i != rank:
-                msg = {SEQ_NUM: P[rank], MSG: P[rank]}  # Sending data (dummy message).
+                msg = {SEQ_NUM: P[rank], MSG: P[rank]}  # Generating dummy data, for testing purpose.
                 req = COMM_WORLD.isend(msg, dest=i, tag=TAG)  # Non-blocking op.
                 reqs.append(reqs)
                 sleep(delay)
     else:
         for i in group:
             if i != rank:
+                msg = {SEQ_NUM: P[rank], MSG: msg}
                 req = COMM_WORLD.isend(msg, dest=i, tag=TAG)  # Non-blocking op.
                 reqs.append(reqs)
                 sleep(delay)
