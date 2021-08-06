@@ -108,7 +108,8 @@ def example():
         causal_recv()
         causal_multicast_send(group)
         causal_recv()
-    print('[%d] %s' % (rank, P))
+
+    print('[Process %d] %s' % (rank, P))
 
 if __name__ == "__main__":
     # Running example.
