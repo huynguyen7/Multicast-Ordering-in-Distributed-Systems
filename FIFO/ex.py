@@ -1,5 +1,4 @@
 from mpi4py import MPI
-import numpy as np
 from time import sleep
 
 
@@ -23,7 +22,8 @@ rank = COMM_WORLD.Get_rank()
 size = COMM_WORLD.Get_size()
 group = [0,1,2,3]  # Multicasting group
 
-P = np.zeros(4, dtype=np.int16)  # Sequence numbers.. 
+#P = np.zeros(4, dtype=np.int16)  # Sequence numbers.. 
+P = [0]*len(group)
 buffer = dict()  # Storing messages on wait.
 
 

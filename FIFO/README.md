@@ -6,4 +6,4 @@
 
 
 ## Example:
-![linr](./ex.png)
+![linr](./imgs/ex.png)
