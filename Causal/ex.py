@@ -35,6 +35,7 @@ def causality_check(M, P, j):
 
 def causal_multicast_send(group=None, delay=0.1, msg=None):  # Similar to broadcast when using size.
     assert group is not None
+
     P[rank] += 1  # Set P_j[j] = P_j[j]+1
     reqs = []
     if msg is None:
@@ -74,6 +75,7 @@ def causal_recv():  # Receive + Buffer msg if Sequence number is not valid.
             flag2 = causality_check(tmp_M, P, j)
 
             if flag1 and flag2:
+                #send_msg_to_application()
                 P[j] = tmp_M[j]
                 discard_list.append((tmp_M, msg))
 

@@ -57,6 +57,7 @@ def FIFO_recv():  # Receive + Buffer msg if Sequence number is not valid.
         tmp_seq_num = data[SEQ_NUM]
         buffer[tmp_seq_num] = data[MSG]
         while tmp_seq_num in buffer:
+            #send_msg_to_application()
             #print('[Process %d] doing task %d %s.' % (rank, buffer[tmp_seq_num], P))
             tmp_seq_num += 1
         P[stt.Get_source()] = data[SEQ_NUM]
