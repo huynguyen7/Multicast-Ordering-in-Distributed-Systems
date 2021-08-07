@@ -4,6 +4,9 @@ This repository contains academia implementations for Multicast Ordering:
 - Causal Ordering
 - Total Ordering.
 
+**NOTES:**
+Assume that we have reliable multicast.
+
 ## Building
 - Install _OpenMPI_: [Click here](https://www.open-mpi.org/software/ompi/v4.1/)
 - Install _mpi4py_: [Click here](https://mpi4py.readthedocs.io/en/stable/index.html)
